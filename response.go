@@ -6,6 +6,8 @@ type response_ struct {
 	Result
 	Greeting
 	DomainCheckResponse
+	DomainInfoResponse
+	DomainUpdateResponse
 }
 
 var scanResponse = xx.NewScanner()
