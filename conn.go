@@ -28,6 +28,8 @@ type Conn struct {
 	// Greeting holds the last received greeting message from the server,
 	// indicating server name, status, data policy and capabilities.
 	Greeting
+	Objects    []string
+	Extensions []string
 }
 
 // NewConn initializes an epp.Conn from a net.Conn and performs the EPP
@@ -36,6 +38,8 @@ type Conn struct {
 func NewConn(conn net.Conn) (*Conn, error) {
 	c := newConn(conn)
 	err := c.readGreeting()
+    c.Objects = c.Greeting.Objects
+    c.Extensions = c.Greeting.Extensions
 	return c, err
 }
 

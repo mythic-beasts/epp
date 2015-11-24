@@ -24,7 +24,7 @@ func (c *Conn) writeLogin(user, password, newPassword string) error {
 	if len(c.Greeting.Languages) > 0 {
 		lang = c.Greeting.Languages[0]
 	}
-	err := encodeLogin(&c.buf, user, password, newPassword, ver, lang, c.Greeting.Objects, c.Greeting.Extensions)
+	err := encodeLogin(&c.buf, user, password, newPassword, ver, lang, c.Objects, c.Extensions)
 	if err != nil {
 		return err
 	}
