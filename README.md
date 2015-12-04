@@ -4,13 +4,13 @@
 [![godoc](http://img.shields.io/badge/docs-GoDoc-blue.svg)](https://godoc.org/github.com/domainr/epp)
 
 EPP ([Extensible Provisioning Protocol](https://tools.ietf.org/html/rfc5730)) client for
-[Go](https://golang.org/). Extracted from and in production use at [Domainr](https://domainr.com/).
+[Go](https://golang.org/). Extracted from and in production use at [Domainr](https://domainr.com/), and extended by [Mythic Beasts](https://www.mythic-beasts.com/)
 
 **Note:** This library is currently under development. Its API is subject to breaking changes at any time.
 
 ## Installation
 
-`go get github.com/domainr/epp`
+`go get github.com/mythic-beasts/epp`
 
 ## Usage
 
@@ -39,10 +39,18 @@ for _, r := range dcr.Checks {
 }
 ```
 
+## Supported commands
+
+The package currently supports the following methods:
+
+* CheckDomain 
+* DomainInfo 
+* DomainUpdateDS (update command)
+
 ## Todo
 
 - [X] Tests
-- [ ] Commands other than `Check`
+- [ ] More commands
 
 ## Author
 
